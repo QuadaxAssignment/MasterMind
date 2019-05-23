@@ -106,9 +106,14 @@ namespace MasterMind
                 case MatchType.FuzzyMatch:
                     for (int i = 0; i < userValues.Length; i++)
                     {
+                        // Ignore previously matched values
+                        if (userValues[i] == '@') continue;
+
                         for (int j = 0; j < codeValues.Length; j++)
                         {
-                            if (j == i) continue;
+                            // Ignore previously matched values
+                            if (codeValues[j] == '$' || j == i) continue;
+
                             if (codeValues[j] == userValues[i])
                             {
                                 matchCount++;
