@@ -64,7 +64,7 @@ namespace MasterMind
 
             for (int i = 0; i < codeLength; i++)
             {
-                userValues[i] = GetUserResponse(String.Empty, validValues, false);
+                userValues[i] = GetUserResponse(prompt: String.Empty, validResponses: validValues, newLineFlag: false);
             }
             Console.WriteLine();
 

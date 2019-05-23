@@ -8,7 +8,7 @@ namespace MasterMind
         static void Main(string[] args)
         {
             Game game = new Game();
-            while (game.GetUserResponse("Do you want to play MasterMind? ", "YN") == 'Y')
+            while (game.GetUserResponse(prompt: "Do you want to play MasterMind? ", validResponses: "YN") == 'Y')
             {
                 game.Play();
             }
